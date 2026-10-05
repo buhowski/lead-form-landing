@@ -31,13 +31,12 @@ export default async function handler(req, res) {
     const cleanSiteUrl = esc(siteUrl);
 
     const text = [
-        `<b>📬 New Lead from Website</b>`,
-        `—————————————`,
+        `<b>New Lead from Website</b>`,
+        `<b>Source: </b><a href="${cleanSiteUrl}">${cleanSiteUrl}</a>`,
+        ``,
         `👤 <b> Name: </b> <code>${cleanName}</code>`,
         `📞 <b> Phone: </b> <code>${cleanPhone}</code>`,
         `✉️ <b> Email: </b> <code>${cleanEmail}</code>`,
-        `—————————————`,
-        `🌐 <b> Source: </b> <a href="${cleanSiteUrl}">${cleanSiteUrl}</a>`,
     ].join('\n');
 
     try {
