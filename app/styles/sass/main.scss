@@ -3,3 +3,8 @@
 @import 'reset';
 @import 'blocks/**/*';
 @import 'intlTelInput.scss';
+
+button[type="submit"]:disabled {
+    pointer-events: none;
+    opacity: 0.6;
+}
